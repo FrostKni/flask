@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        p:hover {
+            color: #0056b3;
+        }
+
+        /* Animation for predicted salary */
+        .predicted-salary {
+            font-size: 24px;
+            color: #0feb41;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .show-salary {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+    <script>
+        // JavaScript to trigger animation for predicted salary
+        window.onload = function() {
+            var salaryElement = document.querySelector('.predicted-salary');
+            salaryElement.classList.add('show-salary');
+        };
+    </script>
+</head>
+<body style="background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bioenergyconsult.com%2Fwp-content%2Fuploads%2F2020%2F08%2Fimportance-of-data-science.jpg&f=1&nofb=1&ipt=9614ef4ca7e88347f2b5901723ae855eb9326f2f0c554675a146cdc7d0f547ff&ipo=images'); margin:0; padding:0; font-family: Arial, sans-serif;">
+    <h1>Prediction Result</h1>
+    <p>Based on the inputs:</p>
+    <ul>
+        <li><h3>Year:</h3> {{ year }}</li>
+        <li><h3>Experience Level:</h3> {{ experience_level }}</li>
+        <li><h3>Employment Type:</h3> {{ employment_type }}</li>
+        <li><h3>Company Size:</h3> {{ company_size }}</li>
+        <li><h3>Remote Ratio:</h3> {{ remote_ratio }}</li>
+    </ul>
+    <p class="predicted-salary">The predicted salary is: {{ predicted_salary }}</p>
+    <h2>1) Actual vs Predicted Salary</h2>
+    <img src="{{ url_for('static', filename='9.png') }}" alt="Actual vs Predicted values using model">
+    <h2>2) Feature Importance of selected attributes</h2>
+    <img src="{{ url_for('static', filename='10.png') }}" alt="Feature Importance">
+</body>
+</html>

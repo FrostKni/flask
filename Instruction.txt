@@ -1,0 +1,19 @@
+Step 1) download python 
+
+Step 2) install all libary
+    a)pip install seaborn
+    b)pip install matplotlib
+    c)pip install Flask
+    d)pip install scikit-learn
+    e)pip install pandas
+    f)pip install numpy
+
+Step 3)Open vs code and in vs code  open folder flask (the folder which i send in zip)
+
+Step 4)Run the app.py python code in vs code
+
+Step 5) In terminal you will get the link of the website 
+
+Step 6)Paste the url in browser and the website is started 
+
+done

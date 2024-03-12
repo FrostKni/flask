@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        /* CSS for image container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: white;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #additional-info {
+            position: fixed;
+            bottom: 1px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+    
+
+        #additional-info:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // JavaScript for additional functionality or animations (optional)
+    </script>
+</head>
+<body style="background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.rUMOOMUhdHaz30Wr5IGKOAHaFD%26pid%3DApi&f=1&ipt=ee49d7fea514373ced7f6a6fc73f626652fc7f8c0c9af2d30cb5968fd3d1b015&ipo=images'); margin:0; padding:0; font-family: Arial, sans-serif;">
+    <h1>Some of the Observations of Data Scientist Salary</h1>
+    <h2>1) Experience Level Count Plot</h2>
+    <img src="{{ url_for('static', filename='1.png') }}" alt="Experience Level Count Plot">
+    <h2>2) Mean Salary by Experience Level</h2>
+    <img src="{{ url_for('static', filename='2.png') }}" alt="Mean Salary by Experience Level">
+    <h2>3) Top 10 Job Titles Distribution</h2>
+    <img src="{{ url_for('static', filename='3.png') }}" alt="Top 10 Job Titles Distribution">
+    <h2>4) Salary Distribution by Company Location and Range</h2>
+    <img src="{{ url_for('static', filename='4.png') }}" alt="Salary Distribution by Company Location and Range">
+    <h2>5) Average Salary by Company Size</h2>
+    <img src="{{ url_for('static', filename='5.png') }}" alt="Average Salary by Company Size">
+    <h2>6) Salary Comparison USD vs INR</h2>
+    <img src="{{ url_for('static', filename='6.png') }}" alt="Salary Comparison USD vs INR">
+    <h2>7) Average Salary by Experience Level and Employment Type</h2>
+    <img src="{{ url_for('static', filename='7.png') }}" alt="Average Salary by Experience Level and Employment Type">
+    <h2>8) Comparison of Salary Trends in USA and India</h2>
+    <img src="{{ url_for('static', filename='8.png') }}" alt="Comparison of Salary Trends in USA and India">
+    <br>
+    <a href="/obser"><button id="additional-info">Predict Model</button></a>
+</body>
+</html>
+
